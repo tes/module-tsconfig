@@ -8,7 +8,7 @@ pipeline {
 
   stages {
     stage('Publish') {
-      when { branch 'main' }
+      when { branch 'master' }
       steps {
         sh '''
           BASEVERSION=`node -e "var pjson = require('./package.json'); console.log(pjson.version);" | cut -d"." -f1,2`
