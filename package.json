@@ -1,0 +1,11 @@
+{
+	"name": "@tes/tsconfig",
+	"version": "0.0.0",
+	"description": "Shared TypeScript Configs",
+	"files": [
+		"tes-base-config.json",
+		"tes-nextjs-config.json",
+		"tes-nestjs-config.json"
+	],
+	"dependencies": {}
+}

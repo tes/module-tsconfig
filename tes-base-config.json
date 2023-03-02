@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "tes base",
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,                                 // Actually use typescript
+    "forceConsistentCasingInFileNames": true,       // Force naming style
+    "resolveJsonModule": true,                      // Importing json is super useful
+    "jsx": "preserve",                              // Let whatever build system handle jsx
+    "incremental": true,                            // Faster builds
+    "noImplicitAny": true,                          // Any pretty much breaks typescript, avoid it.
+    "strictPropertyInitialization": false,          // QoL to leave this off, but can allow undefined's in classes
+    "useUnknownInCatchVariables": true,             // Force checks on errors so we don't error within error handling (thrown errors don't have to be an error subclass)
+    "allowUnreachableCode": false,                  // Should remove unreachable code
+    "noUncheckedIndexedAccess": true,               // Unknown keys = unknown data, check it isn't undefined
+    "noUnusedLocals": true,                         // Should remove unused code
+    "noImplicitReturns": true,                      // If you're expecting a return value and don't have one, something's gone wrong
+    "noImplicitOverride": true,                     // Function hiding can be a nightmare to debug, very little work to avoid horrible debugging sessions
+    "allowUnusedLabels": false,                     // Barely anyone uses labels anyway, usually mis-type
+    "noPropertyAccessFromIndexSignature": true,     // Helps determine what keys are unknown and therefore need to be checked
+    "isolatedModules": true,                        // Avoid polluting the global namespace
+
+    // Potential
+    "noFallthroughCasesInSwitch": true              // Switch cases are easy to mess up and run a few cases
+  }
+}
